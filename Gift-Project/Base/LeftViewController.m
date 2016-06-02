@@ -1,22 +1,22 @@
 //
-//  BaseViewController.m
+//  LeftViewController.m
 //  Gift-Project
 //
-//  Created by mac on 16/6/2.
+//  Created by Honey on 16/6/2.
 //  Copyright © 2016年 tingting. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "LeftViewController.h"
 
-@interface BaseViewController ()
+@interface LeftViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation LeftViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor=[UIColor yellowColor];
 }
 
 - (void)didReceiveMemoryWarning {
