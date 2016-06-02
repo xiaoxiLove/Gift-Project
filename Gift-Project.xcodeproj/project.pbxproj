@@ -868,6 +868,7 @@
 				0490C6891CFFE78300EEEEE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
