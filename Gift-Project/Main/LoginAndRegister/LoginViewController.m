@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import <MaxLeap/MaxLeap.h>
+
 
 @interface LoginViewController ()
 
@@ -78,6 +80,8 @@
     
     loginBtn.center = CGPointMake(kScreenW/3.2, kScreenH/1.8);
     
+    [loginBtn addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
+    
     [self.view addSubview:loginBtn];
     
     //设置登录界面注册按钮的图片
@@ -118,6 +122,11 @@
     randomLoginBtn.center = CGPointMake(kScreenW/2, kScreenH/1.1);
     
     [self.view addSubview:randomLoginBtn];
+    
+}
+
+- (void)loginAction{
+    
     
 }
 

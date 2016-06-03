@@ -110,6 +110,7 @@ static NSString *cell_identy = @"cell";
     
 }
 
+
 #pragma mark --UICollectionViewDataSource
 
 //返回item个数
@@ -123,6 +124,34 @@ static NSString *cell_identy = @"cell";
     //✅使用注册单元格
     
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell_identy forIndexPath:indexPath];
+    
+    imgV=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height-20)];
+    
+    imgV.image=[UIImage imageNamed:@"1"];
+    
+    [cell addSubview:imgV];
+    
+    pricelbl=[[UILabel alloc]initWithFrame:CGRectMake(0, cell.bounds.size.height-20, cell.bounds.size.width-20, 20)];
+    
+    pricelbl.text=@"$100.00";
+    
+    pricelbl.textColor=[UIColor redColor];
+    
+    [cell addSubview:pricelbl];
+    
+    collect=[[UIImageView alloc]initWithFrame:CGRectMake(cell.bounds.size.width-70, cell.bounds.size.height-20, 20, 20)];
+    
+    collect.image=[UIImage imageNamed:@"21"];
+    
+    [cell addSubview:collect];
+    
+    numberlbl=[[UILabel alloc]initWithFrame:CGRectMake(cell.bounds.size.width-50, cell.bounds.size.height-20, 40, 20)];
+    
+    numberlbl.text=@"123";
+    
+    numberlbl.textColor=[UIColor lightGrayColor];
+    
+    [cell addSubview:numberlbl];
     
     cell.backgroundColor = [UIColor whiteColor];
 
