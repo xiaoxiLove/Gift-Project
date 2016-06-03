@@ -66,6 +66,21 @@
 		0490C7431CFFEF4500EEEEE7 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490C7301CFFEF4500EEEEE7 /* UIView+MJExtension.m */; };
 		0490C7461CFFEF6400EEEEE7 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490C7451CFFEF6400EEEEE7 /* BaseModel.m */; };
 		0490C7491CFFEF7A00EEEEE7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490C7481CFFEF7A00EEEEE7 /* BaseViewController.m */; };
+		0490C8341D0162F400EEEEE7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C8291D0162F400EEEEE7 /* Bolts.framework */; };
+		0490C8351D0162F400EEEEE7 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C82A1D0162F400EEEEE7 /* FBSDKCoreKit.framework */; };
+		0490C8361D0162F400EEEEE7 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C82B1D0162F400EEEEE7 /* FBSDKLoginKit.framework */; };
+		0490C8371D0162F400EEEEE7 /* MaxLeap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C82C1D0162F400EEEEE7 /* MaxLeap.framework */; };
+		0490C8381D0162F400EEEEE7 /* MLFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C82D1D0162F400EEEEE7 /* MLFacebookUtilsV4.framework */; };
+		0490C8391D0162F400EEEEE7 /* MLHelpCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C82F1D0162F400EEEEE7 /* MLHelpCenter.framework */; };
+		0490C83A1D0162F500EEEEE7 /* MLHelpCenterImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0490C8311D0162F400EEEEE7 /* MLHelpCenterImages.bundle */; };
+		0490C83B1D0162F500EEEEE7 /* MLHelpCenterLocalizable.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0490C8321D0162F400EEEEE7 /* MLHelpCenterLocalizable.bundle */; };
+		0490C83C1D0162F500EEEEE7 /* MLHelpCenterThemes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0490C8331D0162F400EEEEE7 /* MLHelpCenterThemes.bundle */; };
+		0490C83E1D0163BF00EEEEE7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C83D1D0163BF00EEEEE7 /* libz.tbd */; };
+		0490C8401D0163C800EEEEE7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C83F1D0163C800EEEEE7 /* libsqlite3.tbd */; };
+		0490C8421D0163D100EEEEE7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C8411D0163D100EEEEE7 /* SystemConfiguration.framework */; };
+		0490C8441D0163DA00EEEEE7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C8431D0163DA00EEEEE7 /* CoreTelephony.framework */; };
+		0490C8461D0163E200EEEEE7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C8451D0163E200EEEEE7 /* MobileCoreServices.framework */; };
+		0490C8481D0163EC00EEEEE7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C8471D0163EC00EEEEE7 /* StoreKit.framework */; };
 		4A73E2981D001CC60022D856 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73E2971D001CC60022D856 /* HomeViewController.m */; };
 		4A73E29B1D001CF50022D856 /* HomeCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73E29A1D001CF50022D856 /* HomeCollectionViewLayout.m */; };
 		718742871CFFF91E0013B01D /* HotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718742861CFFF91E0013B01D /* HotViewController.m */; };
@@ -255,6 +270,21 @@
 		0490C7481CFFEF7A00EEEEE7 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		0490C74A1CFFF04400EEEEE7 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		0490C74B1CFFF05500EEEEE7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0490C8291D0162F400EEEEE7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		0490C82A1D0162F400EEEEE7 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		0490C82B1D0162F400EEEEE7 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		0490C82C1D0162F400EEEEE7 /* MaxLeap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaxLeap.framework; sourceTree = "<group>"; };
+		0490C82D1D0162F400EEEEE7 /* MLFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MLFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		0490C82F1D0162F400EEEEE7 /* MLHelpCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MLHelpCenter.framework; sourceTree = "<group>"; };
+		0490C8311D0162F400EEEEE7 /* MLHelpCenterImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MLHelpCenterImages.bundle; sourceTree = "<group>"; };
+		0490C8321D0162F400EEEEE7 /* MLHelpCenterLocalizable.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MLHelpCenterLocalizable.bundle; sourceTree = "<group>"; };
+		0490C8331D0162F400EEEEE7 /* MLHelpCenterThemes.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MLHelpCenterThemes.bundle; sourceTree = "<group>"; };
+		0490C83D1D0163BF00EEEEE7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		0490C83F1D0163C800EEEEE7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		0490C8411D0163D100EEEEE7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0490C8431D0163DA00EEEEE7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		0490C8451D0163E200EEEEE7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		0490C8471D0163EC00EEEEE7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		4A73E2961D001CC60022D856 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = "Gift-Project/HomeViewController.h"; sourceTree = SOURCE_ROOT; };
 		4A73E2971D001CC60022D856 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = "Gift-Project/HomeViewController.m"; sourceTree = SOURCE_ROOT; };
 		4A73E2991D001CF50022D856 /* HomeCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeCollectionViewLayout.h; path = "Gift-Project/HomeCollectionViewLayout.h"; sourceTree = SOURCE_ROOT; };
@@ -338,6 +368,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0490C8481D0163EC00EEEEE7 /* StoreKit.framework in Frameworks */,
+				0490C8461D0163E200EEEEE7 /* MobileCoreServices.framework in Frameworks */,
+				0490C8441D0163DA00EEEEE7 /* CoreTelephony.framework in Frameworks */,
+				0490C8421D0163D100EEEEE7 /* SystemConfiguration.framework in Frameworks */,
+				0490C8401D0163C800EEEEE7 /* libsqlite3.tbd in Frameworks */,
+				0490C83E1D0163BF00EEEEE7 /* libz.tbd in Frameworks */,
+				0490C8381D0162F400EEEEE7 /* MLFacebookUtilsV4.framework in Frameworks */,
+				0490C8341D0162F400EEEEE7 /* Bolts.framework in Frameworks */,
+				0490C8371D0162F400EEEEE7 /* MaxLeap.framework in Frameworks */,
+				0490C8391D0162F400EEEEE7 /* MLHelpCenter.framework in Frameworks */,
+				0490C8351D0162F400EEEEE7 /* FBSDKCoreKit.framework in Frameworks */,
+				0490C8361D0162F400EEEEE7 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +389,12 @@
 		0490C6671CFFE78300EEEEE7 = {
 			isa = PBXGroup;
 			children = (
+				0490C8471D0163EC00EEEEE7 /* StoreKit.framework */,
+				0490C8451D0163E200EEEEE7 /* MobileCoreServices.framework */,
+				0490C8431D0163DA00EEEEE7 /* CoreTelephony.framework */,
+				0490C8411D0163D100EEEEE7 /* SystemConfiguration.framework */,
+				0490C83F1D0163C800EEEEE7 /* libsqlite3.tbd */,
+				0490C83D1D0163BF00EEEEE7 /* libz.tbd */,
 				0490C6721CFFE78300EEEEE7 /* Gift-Project */,
 				0490C6711CFFE78300EEEEE7 /* Products */,
 			);
@@ -412,6 +460,7 @@
 		0490C68B1CFFEEE100EEEEE7 /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				0490C8281D0162F400EEEEE7 /* Maxleap */,
 				718743651D000E230013B01D /* 侧滑控制器工程文件 */,
 				0490C7041CFFEF4500EEEEE7 /* MJRefresh */,
 				0490C6D11CFFEF1200EEEEE7 /* AFNetworking */,
@@ -736,6 +785,38 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		0490C8281D0162F400EEEEE7 /* Maxleap */ = {
+			isa = PBXGroup;
+			children = (
+				0490C8291D0162F400EEEEE7 /* Bolts.framework */,
+				0490C82A1D0162F400EEEEE7 /* FBSDKCoreKit.framework */,
+				0490C82B1D0162F400EEEEE7 /* FBSDKLoginKit.framework */,
+				0490C82C1D0162F400EEEEE7 /* MaxLeap.framework */,
+				0490C82D1D0162F400EEEEE7 /* MLFacebookUtilsV4.framework */,
+				0490C82E1D0162F400EEEEE7 /* MLHelpCenter.embeddedframework */,
+			);
+			path = Maxleap;
+			sourceTree = "<group>";
+		};
+		0490C82E1D0162F400EEEEE7 /* MLHelpCenter.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				0490C82F1D0162F400EEEEE7 /* MLHelpCenter.framework */,
+				0490C8301D0162F400EEEEE7 /* Resources */,
+			);
+			path = MLHelpCenter.embeddedframework;
+			sourceTree = "<group>";
+		};
+		0490C8301D0162F400EEEEE7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0490C8311D0162F400EEEEE7 /* MLHelpCenterImages.bundle */,
+				0490C8321D0162F400EEEEE7 /* MLHelpCenterLocalizable.bundle */,
+				0490C8331D0162F400EEEEE7 /* MLHelpCenterThemes.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		718742F81D00026B0013B01D /* image */ = {
 			isa = PBXGroup;
 			children = (
@@ -891,6 +972,7 @@
 				7187434D1D0002830013B01D /* back.png in Resources */,
 				0490C6831CFFE78300EEEEE7 /* LaunchScreen.storyboard in Resources */,
 				718743341D0002830013B01D /* 9.png in Resources */,
+				0490C83C1D0162F500EEEEE7 /* MLHelpCenterThemes.bundle in Resources */,
 				718743801D0032A30013B01D /* segemnt_background.png in Resources */,
 				0490C6801CFFE78300EEEEE7 /* Assets.xcassets in Resources */,
 				718743551D0002830013B01D /* page4.jpg in Resources */,
@@ -907,10 +989,12 @@
 				718743421D0002830013B01D /* 23.png in Resources */,
 				7187433D1D0002830013B01D /* 18.png in Resources */,
 				7187433A1D0002830013B01D /* 15.png in Resources */,
+				0490C83A1D0162F500EEEEE7 /* MLHelpCenterImages.bundle in Resources */,
 				7187435C1D0002830013B01D /* share.png in Resources */,
 				718743391D0002830013B01D /* 14.png in Resources */,
 				7187432F1D0002830013B01D /* 4.png in Resources */,
 				718743541D0002830013B01D /* page3.jpg in Resources */,
+				0490C83B1D0162F500EEEEE7 /* MLHelpCenterLocalizable.bundle in Resources */,
 				0490C67E1CFFE78300EEEEE7 /* Main.storyboard in Resources */,
 				718743371D0002830013B01D /* 12.png in Resources */,
 				718743401D0002830013B01D /* 21.png in Resources */,
@@ -1115,6 +1199,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Gift-Project/framework/Maxleap",
+					"$(PROJECT_DIR)/Gift-Project/framework/Maxleap/MLHelpCenter.embeddedframework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Gift-Project/PrefixHeader.pch";
 				INFOPLIST_FILE = "Gift-Project/Info.plist";
@@ -1128,6 +1217,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Gift-Project/framework/Maxleap",
+					"$(PROJECT_DIR)/Gift-Project/framework/Maxleap/MLHelpCenter.embeddedframework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Gift-Project/PrefixHeader.pch";
 				INFOPLIST_FILE = "Gift-Project/Info.plist";
