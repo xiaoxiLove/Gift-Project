@@ -7,8 +7,17 @@
 //
 
 #import "AppDelegate.h"
+#import <MaxLeap/MaxLeap.h>
+#import "HotViewController.h"
+#import "BaseNavigationController.h"
+#import "CustomTabBarController.h"
+#import "LeftViewController.h"
+#import "MMDrawerController.h"
 
 @interface AppDelegate ()
+{
+    CustomTabBarController *custom;
+}
 
 @end
 
@@ -16,8 +25,96 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+
+    //配置Maxleap数据库
+    [MaxLeap setApplicationId:@"5750da42169e7d0001a5fece" clientKey:@"LWZsY3RPNEUxMnQ4N2NBNUxSRDdrZw" site:MLSiteCN];
+    
+    MLObject *obj = [MLObject objectWithoutDataWithClassName:@"Test" objectId:@"561c83c0226"];
+    
+    [obj fetchIfNeededInBackgroundWithBlock:^(MLObject * _Nullable object, NSError * _Nullable error) {
+        
+        if (error.code == kMLErrorInvalidObjectId) {
+            
+            NSLog(@"已经能够正确连接上您的云端应用");
+            
+        } else {
+            
+            NSLog(@"应用访问凭证不正确，请检查。");
+        }
+    }];
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    self.window.backgroundColor = [UIColor clearColor];
+    
+    [self.window setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@""]]];
+    
+    [self.window makeKeyAndVisible];
+    
+    [self Load];
+
+    
     return YES;
+}
+
+-(void)Load
+{
+    NSArray *vc_names = @[@"Home",@"Hot",@"My"];
+    
+    NSMutableArray *navs = [[NSMutableArray alloc]init];
+    
+    for (int i = 0; i<vc_names.count; i++) {
+        
+        Class class = NSClassFromString([NSString stringWithFormat:@"%@ViewController",vc_names[i]]);
+        
+        
+        BaseViewController *vc = [[class alloc]init];
+        
+        BaseNavigationController *nav = [[BaseNavigationController alloc]initWithRootViewController:vc];
+        
+        //设置标签图片
+        
+        vc.tabBarItem.image=[UIImage imageNamed:[NSString stringWithFormat:@"%d",i+1]];
+        
+        [navs addObject:nav];
+        
+        custom = [[CustomTabBarController alloc]initWithSelectedImage:[UIImage imageNamed:@""] tabBarBackgroundImage:[UIImage imageNamed:@""]];
+        
+        custom.viewControllers = navs;
+        
+        custom.selectedIndex = 2;
+        
+    }
+    
+    //创建侧滑控制器
+    //创建左侧视图
+    LeftViewController *leftVC = [[LeftViewController alloc] init];
+    
+    leftVC.view.backgroundColor = [UIColor redColor];
+    //创建侧滑控制器
+    MMDrawerController *drawerVC = [[MMDrawerController alloc] initWithCenterViewController:custom leftDrawerViewController:leftVC];
+    
+    //设置侧滑的距离
+    drawerVC.maximumLeftDrawerWidth = 200;
+    //阴影
+    drawerVC.showsShadow = YES;
+    
+    //阴影颜色
+    drawerVC.shadowColor = [UIColor grayColor];
+    
+    //阴影偏移量
+    drawerVC.shadowOffset = CGSizeMake(-5, 0);
+    
+    
+    //打开与关闭的触发手势
+    drawerVC.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+    
+    drawerVC.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
+    
+    //将侧滑控制器作为根视图控制器
+    self.window.rootViewController = drawerVC;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
