@@ -126,6 +126,8 @@
 		718743721D000E230013B01D /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7187436E1D000E230013B01D /* UIViewController+MMDrawerController.m */; };
 		718743751D000E780013B01D /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718743741D000E780013B01D /* LeftViewController.m */; };
 		718743771D0011470013B01D /* navbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 718743761D0011470013B01D /* navbg.png */; };
+		7187437A1D002AE80013B01D /* SegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 718743791D002AE80013B01D /* SegmentView.m */; };
+		718743801D0032A30013B01D /* segemnt_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7187437F1D0032A30013B01D /* segemnt_background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -320,6 +322,9 @@
 		718743731D000E780013B01D /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		718743741D000E780013B01D /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		718743761D0011470013B01D /* navbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbg.png; sourceTree = "<group>"; };
+		718743781D002AE80013B01D /* SegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentView.h; sourceTree = "<group>"; };
+		718743791D002AE80013B01D /* SegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentView.m; sourceTree = "<group>"; };
+		7187437F1D0032A30013B01D /* segemnt_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segemnt_background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +397,8 @@
 				718743631D0008B70013B01D /* CustomTabBarController.m */,
 				718743731D000E780013B01D /* LeftViewController.h */,
 				718743741D000E780013B01D /* LeftViewController.m */,
+				718743781D002AE80013B01D /* SegmentView.h */,
+				718743791D002AE80013B01D /* SegmentView.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -722,6 +729,7 @@
 		718742F81D00026B0013B01D /* image */ = {
 			isa = PBXGroup;
 			children = (
+				7187437F1D0032A30013B01D /* segemnt_background.png */,
 				718743761D0011470013B01D /* navbg.png */,
 				718742F91D0002830013B01D /* 1.png */,
 				718742FA1D0002830013B01D /* 2.png */,
@@ -873,6 +881,7 @@
 				7187434D1D0002830013B01D /* back.png in Resources */,
 				0490C6831CFFE78300EEEEE7 /* LaunchScreen.storyboard in Resources */,
 				718743341D0002830013B01D /* 9.png in Resources */,
+				718743801D0032A30013B01D /* segemnt_background.png in Resources */,
 				0490C6801CFFE78300EEEEE7 /* Assets.xcassets in Resources */,
 				718743551D0002830013B01D /* page4.jpg in Resources */,
 				718743441D0002830013B01D /* 25.png in Resources */,
@@ -939,6 +948,7 @@
 				0490C73C1CFFEF4500EEEEE7 /* MJRefreshGifHeader.m in Sources */,
 				0490C6FF1CFFEF1200EEEEE7 /* UIButton+AFNetworking.m in Sources */,
 				0490C6C71CFFEF0700EEEEE7 /* SDWebImageDownloader.m in Sources */,
+				7187437A1D002AE80013B01D /* SegmentView.m in Sources */,
 				0490C7001CFFEF1200EEEEE7 /* UIImageView+AFNetworking.m in Sources */,
 				0490C6A11CFFEEFC00EEEEE7 /* UIViewExt.m in Sources */,
 				0490C73A1CFFEF4500EEEEE7 /* MJRefreshBackNormalFooter.m in Sources */,
