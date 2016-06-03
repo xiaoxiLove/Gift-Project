@@ -28,6 +28,8 @@
     
     _collectionView.delegate = self;
     
+    _collectionView.backgroundColor = [UIColor clearColor];
+    
     //注册单元格
     [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     
@@ -48,7 +50,7 @@
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
-    cell.backgroundColor = [UIColor orangeColor];
+    cell.backgroundColor = [UIColor redColor];
     
     return cell;
 
