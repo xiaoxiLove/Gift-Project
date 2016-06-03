@@ -79,13 +79,13 @@
         
         [navs addObject:nav];
         
-        custom = [[CustomTabBarController alloc]initWithSelectedImage:[UIImage imageNamed:@""] tabBarBackgroundImage:[UIImage imageNamed:@""]];
-        
-        custom.viewControllers = navs;
-        
-        custom.selectedIndex = 2;
-        
     }
+    
+    custom = [[CustomTabBarController alloc]initWithSelectedImage:[UIImage imageNamed:@""] tabBarBackgroundImage:[UIImage imageNamed:@""]];
+    
+    custom.viewControllers = navs;
+    
+    custom.selectedIndex = 2;
     
     //创建侧滑控制器
     //创建左侧视图

@@ -84,6 +84,9 @@
 		0481A1CB1D01D54D002D0738 /* RelationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481A1CA1D01D54D002D0738 /* RelationViewController.m */; };
 		0481A1D01D01D55D002D0738 /* OurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481A1CD1D01D55D002D0738 /* OurViewController.m */; };
 		0481A1D11D01D55D002D0738 /* QuitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481A1CF1D01D55D002D0738 /* QuitViewController.m */; };
+		0481A1DF1D01D95C002D0738 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481A1DE1D01D95C002D0738 /* MyViewController.m */; };
+		0481A1E21D01DA38002D0738 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481A1E11D01DA38002D0738 /* DetailViewController.m */; };
+		0481A1E51D01DACE002D0738 /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481A1E41D01DACE002D0738 /* CollectViewController.m */; };
 		0490C6751CFFE78300EEEEE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490C6741CFFE78300EEEEE7 /* main.m */; };
 		0490C6781CFFE78300EEEEE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490C6771CFFE78300EEEEE7 /* AppDelegate.m */; };
 		0490C67B1CFFE78300EEEEE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490C67A1CFFE78300EEEEE7 /* ViewController.m */; };
@@ -256,6 +259,12 @@
 		0481A1CD1D01D55D002D0738 /* OurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OurViewController.m; sourceTree = "<group>"; };
 		0481A1CE1D01D55D002D0738 /* QuitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuitViewController.h; sourceTree = "<group>"; };
 		0481A1CF1D01D55D002D0738 /* QuitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuitViewController.m; sourceTree = "<group>"; };
+		0481A1DD1D01D95C002D0738 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		0481A1DE1D01D95C002D0738 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		0481A1E01D01DA38002D0738 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		0481A1E11D01DA38002D0738 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		0481A1E31D01DACE002D0738 /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
+		0481A1E41D01DACE002D0738 /* CollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectViewController.m; sourceTree = "<group>"; };
 		0490C6701CFFE78300EEEEE7 /* Gift-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gift-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0490C6741CFFE78300EEEEE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0490C6761CFFE78300EEEEE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -623,9 +632,9 @@
 		0481A1AF1D01D42F002D0738 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				0481A1DB1D01D8E9002D0738 /* Model */,
+				0481A1DC1D01D8E9002D0738 /* View */,
 				0481A1B01D01D42F002D0738 /* Controller */,
-				0481A1B11D01D42F002D0738 /* Model */,
-				0481A1B21D01D42F002D0738 /* View */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -633,6 +642,8 @@
 		0481A1B01D01D42F002D0738 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0481A1E31D01DACE002D0738 /* CollectViewController.h */,
+				0481A1E41D01DACE002D0738 /* CollectViewController.m */,
 				0481A1CC1D01D55D002D0738 /* OurViewController.h */,
 				0481A1CD1D01D55D002D0738 /* OurViewController.m */,
 				0481A1CE1D01D55D002D0738 /* QuitViewController.h */,
@@ -643,22 +654,12 @@
 				0481A1C71D01D53E002D0738 /* ThemeViewController.m */,
 				0481A1C31D01D4B3002D0738 /* UpdataViewController.h */,
 				0481A1C41D01D4B3002D0738 /* UpdataViewController.m */,
+				0481A1DD1D01D95C002D0738 /* MyViewController.h */,
+				0481A1DE1D01D95C002D0738 /* MyViewController.m */,
+				0481A1E01D01DA38002D0738 /* DetailViewController.h */,
+				0481A1E11D01DA38002D0738 /* DetailViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		0481A1B11D01D42F002D0738 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0481A1B21D01D42F002D0738 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		0481A1BC1D01D491002D0738 /* LoginAndRegister */ = {
@@ -670,6 +671,20 @@
 				0481A1C01D01D49B002D0738 /* RegisterViewController.m */,
 			);
 			path = LoginAndRegister;
+			sourceTree = "<group>";
+		};
+		0481A1DB1D01D8E9002D0738 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0481A1DC1D01D8E9002D0738 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0490C6671CFFE78300EEEEE7 = {
@@ -1163,6 +1178,7 @@
 				0490C73E1CFFEF4500EEEEE7 /* MJRefreshStateHeader.m in Sources */,
 				718743721D000E230013B01D /* UIViewController+MMDrawerController.m in Sources */,
 				0490C7341CFFEF4500EEEEE7 /* MJRefreshFooter.m in Sources */,
+				0481A1E21D01DA38002D0738 /* DetailViewController.m in Sources */,
 				0490C6C61CFFEF0700EEEEE7 /* SDWebImageDecoder.m in Sources */,
 				718743751D000E780013B01D /* LeftViewController.m in Sources */,
 				0490C73C1CFFEF4500EEEEE7 /* MJRefreshGifHeader.m in Sources */,
@@ -1195,6 +1211,7 @@
 				0490C7391CFFEF4500EEEEE7 /* MJRefreshBackGifFooter.m in Sources */,
 				0490C7331CFFEF4500EEEEE7 /* MJRefreshComponent.m in Sources */,
 				0490C6751CFFE78300EEEEE7 /* main.m in Sources */,
+				0481A1DF1D01D95C002D0738 /* MyViewController.m in Sources */,
 				0490C6F81CFFEF1200EEEEE7 /* AFURLRequestSerialization.m in Sources */,
 				0490C7021CFFEF1200EEEEE7 /* UIRefreshControl+AFNetworking.m in Sources */,
 				0490C6C81CFFEF0700EEEEE7 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1212,6 +1229,7 @@
 				0490C73D1CFFEF4500EEEEE7 /* MJRefreshNormalHeader.m in Sources */,
 				0490C6FB1CFFEF1200EEEEE7 /* AFAutoPurgingImageCache.m in Sources */,
 				0481A1D01D01D55D002D0738 /* OurViewController.m in Sources */,
+				0481A1E51D01DACE002D0738 /* CollectViewController.m in Sources */,
 				0490C6F61CFFEF1200EEEEE7 /* AFNetworkReachabilityManager.m in Sources */,
 				0490C7311CFFEF4500EEEEE7 /* MJRefreshAutoFooter.m in Sources */,
 				0490C7381CFFEF4500EEEEE7 /* MJRefreshAutoStateFooter.m in Sources */,
