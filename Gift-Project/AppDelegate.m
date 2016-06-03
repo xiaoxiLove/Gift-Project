@@ -7,11 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import <MaxLeap/MaxLeap.h>
 #import "HotViewController.h"
 #import "BaseNavigationController.h"
 #import "CustomTabBarController.h"
 #import "LeftViewController.h"
 #import "MMDrawerController.h"
+
 @interface AppDelegate ()
 {
     CustomTabBarController *custom;
@@ -24,6 +26,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+
+    //配置Maxleap数据库
+    [MaxLeap setApplicationId:@"5750da42169e7d0001a5fece" clientKey:@"LWZsY3RPNEUxMnQ4N2NBNUxSRDdrZw" site:MLSiteCN];
+    
+    MLObject *obj = [MLObject objectWithoutDataWithClassName:@"Test" objectId:@"561c83c0226"];
+    
+    [obj fetchIfNeededInBackgroundWithBlock:^(MLObject * _Nullable object, NSError * _Nullable error) {
+        
+        if (error.code == kMLErrorInvalidObjectId) {
+            
+            NSLog(@"已经能够正确连接上您的云端应用");
+            
+        } else {
+            
+            NSLog(@"应用访问凭证不正确，请检查。");
+        }
+    }];
+    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     self.window.backgroundColor = [UIColor clearColor];
@@ -31,6 +51,7 @@
     [self.window setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@""]]];
     
     [self.window makeKeyAndVisible];
+    
     [self Load];
 
     
@@ -70,7 +91,7 @@
     //创建左侧视图
     LeftViewController *leftVC = [[LeftViewController alloc] init];
     
-    leftVC.view.backgroundColor = [UIColor yellowColor];
+    leftVC.view.backgroundColor = [UIColor redColor];
     //创建侧滑控制器
     MMDrawerController *drawerVC = [[MMDrawerController alloc] initWithCenterViewController:custom leftDrawerViewController:leftVC];
     
