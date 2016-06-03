@@ -66,6 +66,8 @@
 		0490C7431CFFEF4500EEEEE7 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490C7301CFFEF4500EEEEE7 /* UIView+MJExtension.m */; };
 		0490C7461CFFEF6400EEEEE7 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490C7451CFFEF6400EEEEE7 /* BaseModel.m */; };
 		0490C7491CFFEF7A00EEEEE7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490C7481CFFEF7A00EEEEE7 /* BaseViewController.m */; };
+		4A73E2981D001CC60022D856 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73E2971D001CC60022D856 /* HomeViewController.m */; };
+		4A73E29B1D001CF50022D856 /* HomeCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73E29A1D001CF50022D856 /* HomeCollectionViewLayout.m */; };
 		718742871CFFF91E0013B01D /* HotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718742861CFFF91E0013B01D /* HotViewController.m */; };
 		7187428A1CFFFA3D0013B01D /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718742891CFFFA3D0013B01D /* BaseNavigationController.m */; };
 		7187432C1D0002830013B01D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 718742F91D0002830013B01D /* 1.png */; };
@@ -251,6 +253,10 @@
 		0490C7481CFFEF7A00EEEEE7 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		0490C74A1CFFF04400EEEEE7 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		0490C74B1CFFF05500EEEEE7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		4A73E2961D001CC60022D856 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = "Gift-Project/HomeViewController.h"; sourceTree = SOURCE_ROOT; };
+		4A73E2971D001CC60022D856 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = "Gift-Project/HomeViewController.m"; sourceTree = SOURCE_ROOT; };
+		4A73E2991D001CF50022D856 /* HomeCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeCollectionViewLayout.h; path = "Gift-Project/HomeCollectionViewLayout.h"; sourceTree = SOURCE_ROOT; };
+		4A73E29A1D001CF50022D856 /* HomeCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeCollectionViewLayout.m; path = "Gift-Project/HomeCollectionViewLayout.m"; sourceTree = SOURCE_ROOT; };
 		718742851CFFF91E0013B01D /* HotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotViewController.h; path = "Gift-Project/HotViewController.h"; sourceTree = SOURCE_ROOT; };
 		718742861CFFF91E0013B01D /* HotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotViewController.m; path = "Gift-Project/HotViewController.m"; sourceTree = SOURCE_ROOT; };
 		718742881CFFFA3D0013B01D /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
@@ -432,6 +438,8 @@
 		0490C68F1CFFEEE100EEEEE7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4A73E2961D001CC60022D856 /* HomeViewController.h */,
+				4A73E2971D001CC60022D856 /* HomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -439,6 +447,8 @@
 		0490C6901CFFEEE100EEEEE7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4A73E2991D001CF50022D856 /* HomeCollectionViewLayout.h */,
+				4A73E29A1D001CF50022D856 /* HomeCollectionViewLayout.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -947,6 +957,7 @@
 				718743641D0008B70013B01D /* CustomTabBarController.m in Sources */,
 				0490C6FC1CFFEF1200EEEEE7 /* AFImageDownloader.m in Sources */,
 				7187436F1D000E230013B01D /* MMDrawerBarButtonItem.m in Sources */,
+				4A73E29B1D001CF50022D856 /* HomeCollectionViewLayout.m in Sources */,
 				0490C7321CFFEF4500EEEEE7 /* MJRefreshBackFooter.m in Sources */,
 				0490C6FD1CFFEF1200EEEEE7 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				0490C7031CFFEF1200EEEEE7 /* UIWebView+AFNetworking.m in Sources */,
@@ -972,6 +983,7 @@
 				0490C6A01CFFEEFC00EEEEE7 /* UIUtils.m in Sources */,
 				0490C6C21CFFEF0700EEEEE7 /* MKAnnotationView+WebCache.m in Sources */,
 				0490C7491CFFEF7A00EEEEE7 /* BaseViewController.m in Sources */,
+				4A73E2981D001CC60022D856 /* HomeViewController.m in Sources */,
 				0490C7351CFFEF4500EEEEE7 /* MJRefreshHeader.m in Sources */,
 				0490C73B1CFFEF4500EEEEE7 /* MJRefreshBackStateFooter.m in Sources */,
 				0490C73D1CFFEF4500EEEEE7 /* MJRefreshNormalHeader.m in Sources */,
