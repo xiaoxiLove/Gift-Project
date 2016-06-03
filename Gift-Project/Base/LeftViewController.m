@@ -50,19 +50,22 @@
     
     switch (indexPath.row) {
         case 0:
-    cell.textLabel.text = @"RNG";
+    cell.textLabel.text = @"送.男票";
             break;
         case 1:
-            cell.textLabel.text = @"WE";
+            cell.textLabel.text = @"送.闺蜜";
             break;
         case 2:
-            cell.textLabel.text = @"EDG必输";
+            cell.textLabel.text = @"送.同事";
             break;
         case 3:
-            cell.textLabel.text = @"IG";
+            cell.textLabel.text = @"送.朋友";
             break;
         case 4:
-            cell.textLabel.text = @"VG";
+            cell.textLabel.text = @"送.爸妈";
+            break;
+        case 5:
+            cell.textLabel.text = @"送.基友";
             break;
 
             
