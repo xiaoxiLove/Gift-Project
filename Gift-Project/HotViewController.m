@@ -9,6 +9,9 @@
 #import "HotViewController.h"
 #import "SegmentView.h"
 #import "MJRefresh.h"
+#import <MaxLeap/MaxLeap.h>
+#import "HotModel.h"
+#import "UIImageView+WebCache.h"
 
 
 @interface HotViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
@@ -29,6 +32,8 @@
     UIImageView*collect;//收藏图片
     
     UILabel*numberlbl;//收藏人数
+    
+    NSMutableArray *dataList;
 
 }
 
@@ -42,8 +47,27 @@ static NSString *cell_identy = @"cell";
 /**
  *  分类主界面
  */
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+
+}
+
+- (instancetype)init{
+    
+    if (self = [super init]) {
+        
+        [self LoadData];
+
+    }
+    
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     color = [UIColor cyanColor];
    
@@ -76,6 +100,41 @@ static NSString *cell_identy = @"cell";
         
     }];
     
+}
+
+//从MaxLeap服务器获取数据
+-(void)LoadData
+{
+    
+    //查询语句
+    MLQuery *query = [MLQuery queryWithClassName:@"gift"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        
+        dataList=[[NSMutableArray alloc]init];
+        
+        for (NSInteger i = 0; i<objects.count ; i++ ) {
+            
+            HotModel *model=[[HotModel alloc]init];
+
+            MLObject *myObject = objects[i];
+            
+            model.giftName=myObject[@"giftName"];
+            
+            model.giftPrice=myObject[@"giftPrice"];
+            
+            model.giftDetail=myObject[@"giftDetail"];
+            
+            model.imageurl=myObject[@"Url"];
+            
+            [dataList addObject:model];
+            
+            NSLog(@"%@",model.imageurl);
+            
+        }
+    }];
+    
+
 }
 //刷新
 
@@ -116,24 +175,34 @@ static NSString *cell_identy = @"cell";
 //返回item个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
-    return 30;
+    return 10;
 }
 //返回单元格
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     //✅使用注册单元格
     
+    HotModel *model = dataList[indexPath.row];
+    
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell_identy forIndexPath:indexPath];
     
+    //处理单元格复用问题
+    for(UIImageView *view in cell.subviews) {
+        [view removeFromSuperview];
+    }
+
     imgV=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height-20)];
     
-    imgV.image=[UIImage imageNamed:@"1"];
     
+    [imgV setImageWithURL:[NSURL URLWithString:model.imageurl]];
+
+    NSLog(@"地址是%@",model.imageurl);
+
     [cell addSubview:imgV];
     
     pricelbl=[[UILabel alloc]initWithFrame:CGRectMake(0, cell.bounds.size.height-20, cell.bounds.size.width-20, 20)];
     
-    pricelbl.text=@"$100.00";
+    pricelbl.text= [NSString stringWithFormat:@"%@",model.giftPrice];
     
     pricelbl.textColor=[UIColor redColor];
     
@@ -147,7 +216,7 @@ static NSString *cell_identy = @"cell";
     
     numberlbl=[[UILabel alloc]initWithFrame:CGRectMake(cell.bounds.size.width-50, cell.bounds.size.height-20, 40, 20)];
     
-    numberlbl.text=@"123";
+    numberlbl.text=[NSString stringWithFormat:@"%@",model.giftPrice];
     
     numberlbl.textColor=[UIColor lightGrayColor];
     
