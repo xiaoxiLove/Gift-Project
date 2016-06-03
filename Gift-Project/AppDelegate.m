@@ -70,7 +70,7 @@
     //创建左侧视图
     LeftViewController *leftVC = [[LeftViewController alloc] init];
     
-    leftVC.view.backgroundColor = [UIColor yellowColor];
+    leftVC.view.backgroundColor = [UIColor redColor];
     //创建侧滑控制器
     MMDrawerController *drawerVC = [[MMDrawerController alloc] initWithCenterViewController:custom leftDrawerViewController:leftVC];
     
