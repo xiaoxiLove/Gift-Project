@@ -35,7 +35,7 @@
     
     [self.view addSubview:btn];
     
-//    btn.backgroundColor = [UIColor cyanColor];
+
     
     [btn setImage:[UIImage imageNamed:@"back.png"] forState:UIControlStateNormal];
     

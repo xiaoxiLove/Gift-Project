@@ -46,7 +46,6 @@
     
     [self.view addSubview:btn];
     
-//    btn.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]];
 
     [btn setImage:[UIImage imageNamed:@"back.png"] forState:UIControlStateNormal];
     
