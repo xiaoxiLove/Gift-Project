@@ -15,6 +15,7 @@
 #import "UpdataViewController.h"
 #import "QuitViewController.h"
 
+
 @interface MyViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     
@@ -29,13 +30,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width,  self.view.bounds.size.height)];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width,  self.view.bounds.size.height)];
     
     _tableView.delegate = self;
     
     _tableView.dataSource = self;
     
     [self.view addSubview:_tableView];
+    
+    [self loadData];
+}
+-(void)loadData{
+
+    
+    
+
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -61,7 +70,7 @@
         
         UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(30, 10, 80, 80)];
         
-        [btn setImage:[UIImage imageNamed:@"123.png"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"123.jpg"] forState:UIControlStateNormal];
         
         [btn addTarget:self action:@selector(detail) forControlEvents:UIControlEventTouchDown];
         
@@ -91,12 +100,20 @@
         
         imageView1.image = [UIImage imageNamed:@"456.jpg"];
         
+        cell.backgroundColor = [UIColor greenColor];
+        
+        cell.layer.cornerRadius = 20;
+        
+        cell.layer.masksToBounds = YES;
+        
         [cell addSubview:imageView1];
         
         
         [cell addSubview:label];
         
         [cell addSubview:btn];
+        
+//        cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_bg.jpg"]];
     }
     
     else{
@@ -104,6 +121,10 @@
         cell = [[UITableViewCell alloc]initWithFrame:CGRectMake(0, 150, kScreenW, (kScreenH - 263)/6)];
         
         cell.backgroundColor = [UIColor cyanColor];
+        
+        cell.layer.cornerRadius = 20;
+        
+        cell.layer.masksToBounds = YES;
         
         
         

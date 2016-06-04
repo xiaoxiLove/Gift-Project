@@ -17,11 +17,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIImageView *ImgView = [[UIImageView alloc]initWithFrame:CGRectMake(150, 120, 120, 72)];
+    
+    ImgView.image = [UIImage imageNamed:@"gift.jpg"];
+    
+    [self.view addSubview:ImgView];
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(145, 220, 180, 50)];
+    
+    label.text = @"礼上网来（1.0.0）";
+    
+    [self.view addSubview:label];
+    
+    UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(0, kScreenH - 100, kScreenW, 100)];
+    
+    lab.textAlignment = NSTextAlignmentCenter;
+    
+    lab.text = @"南山南.北秋北";
+    
+    [self.view addSubview:lab];
+    
+    
+    
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 64, 64)];
     
     [self.view addSubview:btn];
     
-    btn.backgroundColor = [UIColor cyanColor];
+//    btn.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]];
+
+    [btn setImage:[UIImage imageNamed:@"back.png"] forState:UIControlStateNormal];
     
     btn.titleLabel.text = @"退出";
     

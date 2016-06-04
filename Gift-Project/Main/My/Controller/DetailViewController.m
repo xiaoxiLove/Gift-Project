@@ -35,7 +35,11 @@
     
     [self.view addSubview:btn];
     
-    btn.backgroundColor = [UIColor cyanColor];
+//    btn.backgroundColor = [UIColor cyanColor];
+    
+    [btn setImage:[UIImage imageNamed:@"back.png"] forState:UIControlStateNormal];
+    
+    btn.titleLabel.text = @"退出";
     
     btn.titleLabel.text = @"退出";
     
@@ -78,11 +82,18 @@
         
     }
     
+    cell.backgroundColor = [UIColor cyanColor];
+    
     return cell;
     
     
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
+    
+    return (kScreenH - 100)/5;
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
