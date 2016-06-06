@@ -174,6 +174,7 @@
 		04A3448A1D0510F50084A26E /* register_password.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A344891D0510F50084A26E /* register_password.png */; };
 		04A3448C1D0510F90084A26E /* register_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A3448B1D0510F90084A26E /* register_message.png */; };
 		04A3448E1D0511120084A26E /* login_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A3448D1D0511120084A26E /* login_message.png */; };
+		04A344961D052AF50084A26E /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A344951D052AF50084A26E /* UserModel.m */; };
 		7118FDC11D02B69E0059DDD2 /* DetalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7118FDC01D02B69E0059DDD2 /* DetalViewController.m */; };
 		7187428A1CFFFA3D0013B01D /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718742891CFFFA3D0013B01D /* BaseNavigationController.m */; };
 		718743641D0008B70013B01D /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718743631D0008B70013B01D /* CustomTabBarController.m */; };
@@ -432,6 +433,8 @@
 		04A344891D0510F50084A26E /* register_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register_password.png; sourceTree = "<group>"; };
 		04A3448B1D0510F90084A26E /* register_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register_message.png; sourceTree = "<group>"; };
 		04A3448D1D0511120084A26E /* login_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_message.png; sourceTree = "<group>"; };
+		04A344941D052AF50084A26E /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		04A344951D052AF50084A26E /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		7118FDBF1D02B69E0059DDD2 /* DetalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalViewController.h; sourceTree = "<group>"; };
 		7118FDC01D02B69E0059DDD2 /* DetalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalViewController.m; sourceTree = "<group>"; };
 		718742881CFFFA3D0013B01D /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
@@ -648,6 +651,7 @@
 		0481A1AF1D01D42F002D0738 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				04A344931D052AEB0084A26E /* Model */,
 				0481A1B01D01D42F002D0738 /* Controller */,
 			);
 			path = My;
@@ -1021,6 +1025,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		04A344931D052AEB0084A26E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04A344941D052AF50084A26E /* UserModel.h */,
+				04A344951D052AF50084A26E /* UserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		718743651D000E230013B01D /* 侧滑控制器工程文件 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1269,6 +1282,7 @@
 				0481A1B51D01D44D002D0738 /* HomeViewController.m in Sources */,
 				0490C7351CFFEF4500EEEEE7 /* MJRefreshHeader.m in Sources */,
 				0490C73B1CFFEF4500EEEEE7 /* MJRefreshBackStateFooter.m in Sources */,
+				04A344961D052AF50084A26E /* UserModel.m in Sources */,
 				0490C73D1CFFEF4500EEEEE7 /* MJRefreshNormalHeader.m in Sources */,
 				0490C6FB1CFFEF1200EEEEE7 /* AFAutoPurgingImageCache.m in Sources */,
 				0481A1D01D01D55D002D0738 /* OurViewController.m in Sources */,

@@ -11,6 +11,7 @@
 #import "AFNCore.h"
 #import "MyViewController.h"
 #import "RegisterViewController.h"
+#import "BaseNavigationController.h"
 
 
 @interface LoginViewController ()
@@ -186,11 +187,8 @@
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"登录成功" message:@"登录成功" preferredStyle:UIAlertControllerStyleAlert];
                 
                 UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-                    
-                    MyViewController *myVC = [[MyViewController alloc]init];
-                    
-                    [self presentViewController:myVC animated:YES completion:nil];
-                    
+
+                    [self dismissViewControllerAnimated:YES completion:nil];
                 }];
                 
                 [alert addAction:action];
@@ -211,6 +209,7 @@
     RegisterViewController *registerVC = [[RegisterViewController alloc]init];
     
     [self presentViewController:registerVC animated:YES completion:nil];
+    
     
 }
 

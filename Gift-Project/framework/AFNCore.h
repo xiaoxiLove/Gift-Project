@@ -16,5 +16,6 @@ typedef void(^MyBlock)(id result);
 
 + (void)loginByEmail:(NSString *)email byPassword:(NSString *)password byMyBlock:(MyBlock)block;
 
++ (NSArray *)queryUserInformationByEmail:(NSString *)email;
 
 @end

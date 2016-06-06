@@ -8,6 +8,7 @@
 
 #import "AFNCore.h"
 #import <Maxleap/MaxLeap.h>
+#import "UserModel.h"
 
 @implementation AFNCore
 
@@ -61,6 +62,30 @@
     }];
 }
 
-
++ (NSArray *)queryUserInformationByEmail:(NSString *)email{
+    
+    //查询语句
+    MLQuery *query = [MLQuery queryWithClassName:@"_User"];
+    
+    [query whereKey:@"email" equalTo:email];
+    
+    NSMutableArray *datalist = [[NSMutableArray alloc]init];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        
+        if (!error) {
+            
+            NSLog(@"%@",objects);
+            
+            for (NSInteger i = 0; i<objects.count; i++) {
+                
+                MLObject *myObject = objects[i];
+                
+                UserModel *model = [[UserModel alloc]init];
+                
+            }
+        }
+    }];
+}
 
 @end
