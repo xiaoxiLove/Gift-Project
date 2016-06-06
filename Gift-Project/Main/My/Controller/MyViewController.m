@@ -15,6 +15,10 @@
 #import "UpdataViewController.h"
 #import "QuitViewController.h"
 #import "LoginViewController.h"
+#import "DetailModel.h"
+#import <Maxleap/MaxLeap.h>
+#import "AFNCore.h"
+
 
 
 @interface MyViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -179,21 +183,48 @@
 
 -(void)detail{
     
-//    DetailViewController *detail = [[DetailViewController alloc]init];
-//    
-//    [self presentViewController:detail animated:YES completion:^{
-//        
-//        NSLog(@"弹出");
-//    }];
+
+    
+//    MLUser *user = [MLUser user];
+    
+    MLUser *user =  (MLUser *)[MLUser currentUser];
     
     
-    LoginViewController *loginVC = [[LoginViewController alloc]init];
+ 
     
-    [self presentViewController:loginVC animated:YES completion:nil];
     
+
+    DetailModel *model = [[DetailModel alloc]init];
+    
+    model.username = user[@"username"];
+    
+    model.date = user[@"lastLoginTime"];
+    
+    
+    
+    
+    
+
+    if (!user) {
+        LoginViewController *loginVC = [[LoginViewController alloc]init];
+        
+        [self presentViewController:loginVC animated:YES completion:nil];
+    }else{
+    
+
+        DetailViewController *detail = [[DetailViewController alloc]init];
+    
+        [self presentViewController:detail animated:YES completion:^{
+    
+            NSLog(@"弹出");
+        }];
+    }
+
     
     
 }
+
+
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     

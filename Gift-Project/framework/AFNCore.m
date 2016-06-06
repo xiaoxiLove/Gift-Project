@@ -21,6 +21,8 @@
     
     user.email = email;
     
+    
+    
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         
         if (succeeded) {
@@ -50,6 +52,7 @@
     [MLUser logInWithUsernameInBackground:email password:password block:^(MLUser *user, NSError *error) {
         
         if (user) {
+            
             
             block(@"登录成功");
             

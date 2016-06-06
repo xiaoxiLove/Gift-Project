@@ -49,6 +49,10 @@
     
 }
 
+-(void)setModel:(DetailModel *)model{
+    
+    model = _model;
+}
 
 -(void)dismiss{
     
@@ -77,12 +81,11 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identy];
         
         
-        
-        
-        
     }
     
-    cell.backgroundColor = [UIColor cyanColor];
+//    cell.backgroundColor = [UIColor cyanColor];
+    
+    cell.textLabel.text = _model.username;
     
     return cell;
     
