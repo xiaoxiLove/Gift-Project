@@ -170,6 +170,8 @@
 		0490C8441D0163DA00EEEEE7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C8431D0163DA00EEEEE7 /* CoreTelephony.framework */; };
 		0490C8461D0163E200EEEEE7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C8451D0163E200EEEEE7 /* MobileCoreServices.framework */; };
 		0490C8481D0163EC00EEEEE7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C8471D0163EC00EEEEE7 /* StoreKit.framework */; };
+		4A069C841D055BE500D2824A /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A069C831D055BE500D2824A /* HomeDetailViewController.m */; };
+		4ADC42BB1D050C8100EBC424 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADC42BA1D050C8100EBC424 /* HomeModel.m */; };
 		7187428A1CFFFA3D0013B01D /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718742891CFFFA3D0013B01D /* BaseNavigationController.m */; };
 		718743641D0008B70013B01D /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718743631D0008B70013B01D /* CustomTabBarController.m */; };
 		7187436F1D000E230013B01D /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 718743671D000E230013B01D /* MMDrawerBarButtonItem.m */; };
@@ -421,6 +423,10 @@
 		0490C8431D0163DA00EEEEE7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		0490C8451D0163E200EEEEE7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		0490C8471D0163EC00EEEEE7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4A069C821D055BE500D2824A /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailViewController.h; sourceTree = "<group>"; };
+		4A069C831D055BE500D2824A /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailViewController.m; sourceTree = "<group>"; };
+		4ADC42B91D050C8100EBC424 /* HomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
+		4ADC42BA1D050C8100EBC424 /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
 		718742881CFFFA3D0013B01D /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		718742891CFFFA3D0013B01D /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		718743621D0008B70013B01D /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
@@ -583,6 +589,7 @@
 		0481A1A71D01D42F002D0738 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				4A069C7B1D0556D400D2824A /* DetailViewC */,
 				0481A1A81D01D42F002D0738 /* Controller */,
 				0481A1A91D01D42F002D0738 /* Model */,
 				0481A1AA1D01D42F002D0738 /* View */,
@@ -595,6 +602,8 @@
 			children = (
 				0481A1B31D01D44D002D0738 /* HomeViewController.h */,
 				0481A1B41D01D44D002D0738 /* HomeViewController.m */,
+				4ADC42B91D050C8100EBC424 /* HomeModel.h */,
+				4ADC42BA1D050C8100EBC424 /* HomeModel.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1038,6 +1047,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		4A069C7B1D0556D400D2824A /* DetailViewC */ = {
+			isa = PBXGroup;
+			children = (
+				4A069C821D055BE500D2824A /* HomeDetailViewController.h */,
+				4A069C831D055BE500D2824A /* HomeDetailViewController.m */,
+			);
+			name = DetailViewC;
+			sourceTree = "<group>";
+		};
 		718743651D000E230013B01D /* 侧滑控制器工程文件 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1223,6 +1241,7 @@
 				0490C73E1CFFEF4500EEEEE7 /* MJRefreshStateHeader.m in Sources */,
 				718743721D000E230013B01D /* UIViewController+MMDrawerController.m in Sources */,
 				0490C7341CFFEF4500EEEEE7 /* MJRefreshFooter.m in Sources */,
+				4ADC42BB1D050C8100EBC424 /* HomeModel.m in Sources */,
 				0481A1E21D01DA38002D0738 /* DetailViewController.m in Sources */,
 				0490C6C61CFFEF0700EEEEE7 /* SDWebImageDecoder.m in Sources */,
 				718743751D000E780013B01D /* LeftViewController.m in Sources */,
@@ -1265,6 +1284,7 @@
 				0490C6C51CFFEF0700EEEEE7 /* SDWebImageCompat.m in Sources */,
 				718743701D000E230013B01D /* MMDrawerController.m in Sources */,
 				7187428A1CFFFA3D0013B01D /* BaseNavigationController.m in Sources */,
+				4A069C841D055BE500D2824A /* HomeDetailViewController.m in Sources */,
 				0490C6C31CFFEF0700EEEEE7 /* NSData+ImageContentType.m in Sources */,
 				0490C6A01CFFEEFC00EEEEE7 /* UIUtils.m in Sources */,
 				0490C6C21CFFEF0700EEEEE7 /* MKAnnotationView+WebCache.m in Sources */,
