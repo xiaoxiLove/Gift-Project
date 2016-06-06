@@ -170,6 +170,10 @@
 		0490C8441D0163DA00EEEEE7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C8431D0163DA00EEEEE7 /* CoreTelephony.framework */; };
 		0490C8461D0163E200EEEEE7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C8451D0163E200EEEEE7 /* MobileCoreServices.framework */; };
 		0490C8481D0163EC00EEEEE7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490C8471D0163EC00EEEEE7 /* StoreKit.framework */; };
+		04A344881D050E480084A26E /* AFNCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A344871D050E480084A26E /* AFNCore.m */; };
+		04A3448A1D0510F50084A26E /* register_password.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A344891D0510F50084A26E /* register_password.png */; };
+		04A3448C1D0510F90084A26E /* register_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A3448B1D0510F90084A26E /* register_message.png */; };
+		04A3448E1D0511120084A26E /* login_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A3448D1D0511120084A26E /* login_message.png */; };
 		7118FDC11D02B69E0059DDD2 /* DetalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7118FDC01D02B69E0059DDD2 /* DetalViewController.m */; };
 		7187428A1CFFFA3D0013B01D /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718742891CFFFA3D0013B01D /* BaseNavigationController.m */; };
 		718743641D0008B70013B01D /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718743631D0008B70013B01D /* CustomTabBarController.m */; };
@@ -423,6 +427,11 @@
 		0490C8431D0163DA00EEEEE7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		0490C8451D0163E200EEEEE7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		0490C8471D0163EC00EEEEE7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		04A344861D050E480084A26E /* AFNCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNCore.h; sourceTree = "<group>"; };
+		04A344871D050E480084A26E /* AFNCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNCore.m; sourceTree = "<group>"; };
+		04A344891D0510F50084A26E /* register_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register_password.png; sourceTree = "<group>"; };
+		04A3448B1D0510F90084A26E /* register_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register_message.png; sourceTree = "<group>"; };
+		04A3448D1D0511120084A26E /* login_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_message.png; sourceTree = "<group>"; };
 		7118FDBF1D02B69E0059DDD2 /* DetalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalViewController.h; sourceTree = "<group>"; };
 		7118FDC01D02B69E0059DDD2 /* DetalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalViewController.m; sourceTree = "<group>"; };
 		718742881CFFFA3D0013B01D /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
@@ -550,6 +559,9 @@
 		0481A1531D01D3CD002D0738 /* LoginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
+				04A3448D1D0511120084A26E /* login_message.png */,
+				04A3448B1D0510F90084A26E /* register_message.png */,
+				04A344891D0510F50084A26E /* register_password.png */,
 				0481A1541D01D3CD002D0738 /* login_backgroud.png */,
 				0481A1551D01D3CD002D0738 /* login_button.png */,
 				0481A1561D01D3CD002D0738 /* login_line.png */,
@@ -590,7 +602,6 @@
 			isa = PBXGroup;
 			children = (
 				0481A1A81D01D42F002D0738 /* Controller */,
-				0481A1A91D01D42F002D0738 /* Model */,
 				0481A1AA1D01D42F002D0738 /* View */,
 			);
 			path = Home;
@@ -603,13 +614,6 @@
 				0481A1B41D01D44D002D0738 /* HomeViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		0481A1A91D01D42F002D0738 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		0481A1AA1D01D42F002D0738 /* View */ = {
@@ -644,8 +648,6 @@
 		0481A1AF1D01D42F002D0738 /* My */ = {
 			isa = PBXGroup;
 			children = (
-				0481A1DB1D01D8E9002D0738 /* Model */,
-				0481A1DC1D01D8E9002D0738 /* View */,
 				0481A1B01D01D42F002D0738 /* Controller */,
 			);
 			path = My;
@@ -683,20 +685,6 @@
 				0481A1C01D01D49B002D0738 /* RegisterViewController.m */,
 			);
 			path = LoginAndRegister;
-			sourceTree = "<group>";
-		};
-		0481A1DB1D01D8E9002D0738 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0481A1DC1D01D8E9002D0738 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		0481A1E61D01DE1E002D0738 /* RefreshTableHeaderView */ = {
@@ -797,6 +785,8 @@
 				0490C6D11CFFEF1200EEEEE7 /* AFNetworking */,
 				0490C6A21CFFEF0700EEEEE7 /* SDWebImage */,
 				0490C69B1CFFEEFC00EEEEE7 /* UIUtils */,
+				04A344861D050E480084A26E /* AFNCore.h */,
+				04A344871D050E480084A26E /* AFNCore.m */,
 			);
 			path = framework;
 			sourceTree = "<group>";
@@ -1118,6 +1108,7 @@
 				0481A1951D01D3CD002D0738 /* share.png in Resources */,
 				0481A16B1D01D3CD002D0738 /* 17.png in Resources */,
 				0481A18D1D01D3CD002D0738 /* page3.jpg in Resources */,
+				04A3448E1D0511120084A26E /* login_message.png in Resources */,
 				0490C6831CFFE78300EEEEE7 /* LaunchScreen.storyboard in Resources */,
 				0481A1631D01D3CD002D0738 /* 1.png in Resources */,
 				0481A1861D01D3CD002D0738 /* fanhui.png in Resources */,
@@ -1171,6 +1162,7 @@
 				0481A17D1D01D3CD002D0738 /* 33.png in Resources */,
 				0490C83A1D0162F500EEEEE7 /* MLHelpCenterImages.bundle in Resources */,
 				0481A16F1D01D3CD002D0738 /* 20.png in Resources */,
+				04A3448A1D0510F50084A26E /* register_password.png in Resources */,
 				0481A1F61D01DE1E002D0738 /* grayArrow.png in Resources */,
 				0481A1661D01D3CD002D0738 /* 12.png in Resources */,
 				0481A1A31D01D3CD002D0738 /* register_content.png in Resources */,
@@ -1184,6 +1176,7 @@
 				0481A18E1D01D3CD002D0738 /* page4.jpg in Resources */,
 				0481A1A51D01D3CD002D0738 /* register_welcome.png in Resources */,
 				0481A17F1D01D3CD002D0738 /* 5.png in Resources */,
+				04A3448C1D0510F90084A26E /* register_message.png in Resources */,
 				0481A18F1D01D3CD002D0738 /* page5.jpg in Resources */,
 				0481A18C1D01D3CD002D0738 /* page2.jpg in Resources */,
 				0481A1A01D01D3CD002D0738 /* register_backgroud.png in Resources */,
@@ -1207,6 +1200,7 @@
 			files = (
 				0481A1C11D01D49B002D0738 /* LoginViewController.m in Sources */,
 				718743711D000E230013B01D /* MMDrawerVisualState.m in Sources */,
+				04A344881D050E480084A26E /* AFNCore.m in Sources */,
 				0481A1C51D01D4B3002D0738 /* UpdataViewController.m in Sources */,
 				0490C7461CFFEF6400EEEEE7 /* BaseModel.m in Sources */,
 				0490C67B1CFFE78300EEEEE7 /* ViewController.m in Sources */,
