@@ -14,6 +14,7 @@
 #import "RelationViewController.h"
 #import "UpdataViewController.h"
 #import "QuitViewController.h"
+#import "LoginViewController.h"
 
 
 @interface MyViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -178,14 +179,17 @@
 
 -(void)detail{
     
-    DetailViewController *detail = [[DetailViewController alloc]init];
+//    DetailViewController *detail = [[DetailViewController alloc]init];
+//    
+//    [self presentViewController:detail animated:YES completion:^{
+//        
+//        NSLog(@"弹出");
+//    }];
     
-    [self presentViewController:detail animated:YES completion:^{
-        
-        NSLog(@"弹出");
-    }];
     
+    LoginViewController *loginVC = [[LoginViewController alloc]init];
     
+    [self presentViewController:loginVC animated:YES completion:nil];
     
     
     

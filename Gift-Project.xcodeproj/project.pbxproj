@@ -182,6 +182,7 @@
 		718743721D000E230013B01D /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7187436E1D000E230013B01D /* UIViewController+MMDrawerController.m */; };
 		718743751D000E780013B01D /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718743741D000E780013B01D /* LeftViewController.m */; };
 		7187437A1D002AE80013B01D /* SegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 718743791D002AE80013B01D /* SegmentView.m */; };
+		71B4831D1D0265F900413A33 /* HotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B4831C1D0265F900413A33 /* HotModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -446,6 +447,8 @@
 		718743741D000E780013B01D /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		718743781D002AE80013B01D /* SegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentView.h; sourceTree = "<group>"; };
 		718743791D002AE80013B01D /* SegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentView.m; sourceTree = "<group>"; };
+		71B4831B1D0265F900413A33 /* HotModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotModel.h; sourceTree = "<group>"; };
+		71B4831C1D0265F900413A33 /* HotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -552,6 +555,9 @@
 		0481A1531D01D3CD002D0738 /* LoginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
+				04A3448D1D0511120084A26E /* login_message.png */,
+				04A3448B1D0510F90084A26E /* register_message.png */,
+				04A344891D0510F50084A26E /* register_password.png */,
 				0481A1541D01D3CD002D0738 /* login_backgroud.png */,
 				0481A1551D01D3CD002D0738 /* login_button.png */,
 				0481A1561D01D3CD002D0738 /* login_line.png */,
@@ -585,7 +591,6 @@
 			isa = PBXGroup;
 			children = (
 				0481A1A81D01D42F002D0738 /* Controller */,
-				0481A1A91D01D42F002D0738 /* Model */,
 				0481A1AA1D01D42F002D0738 /* View */,
 			);
 			path = Home;
@@ -600,13 +605,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		0481A1A91D01D42F002D0738 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		0481A1AA1D01D42F002D0738 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -619,9 +617,8 @@
 		0481A1AB1D01D42F002D0738 /* Hot */ = {
 			isa = PBXGroup;
 			children = (
+				71B483171D02655F00413A33 /* Model */,
 				0481A1AC1D01D42F002D0738 /* Controller */,
-				0481A1AD1D01D42F002D0738 /* Model */,
-				0481A1AE1D01D42F002D0738 /* View */,
 			);
 			path = Hot;
 			sourceTree = "<group>";
@@ -631,22 +628,10 @@
 			children = (
 				0481A1B91D01D471002D0738 /* HotViewController.h */,
 				0481A1BA1D01D471002D0738 /* HotViewController.m */,
+				7118FDBF1D02B69E0059DDD2 /* DetalViewController.h */,
+				7118FDC01D02B69E0059DDD2 /* DetalViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		0481A1AD1D01D42F002D0738 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0481A1AE1D01D42F002D0738 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		0481A1AF1D01D42F002D0738 /* My */ = {
@@ -791,6 +776,8 @@
 				0490C6D11CFFEF1200EEEEE7 /* AFNetworking */,
 				0490C6A21CFFEF0700EEEEE7 /* SDWebImage */,
 				0490C69B1CFFEEFC00EEEEE7 /* UIUtils */,
+				04A344861D050E480084A26E /* AFNCore.h */,
+				04A344871D050E480084A26E /* AFNCore.m */,
 			);
 			path = framework;
 			sourceTree = "<group>";
@@ -1066,6 +1053,15 @@
 			path = "侧滑控制器工程文件";
 			sourceTree = "<group>";
 		};
+		71B483171D02655F00413A33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71B4831B1D0265F900413A33 /* HotModel.h */,
+				71B4831C1D0265F900413A33 /* HotModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1128,6 +1124,7 @@
 				0481A1951D01D3CD002D0738 /* share.png in Resources */,
 				0481A16B1D01D3CD002D0738 /* 17.png in Resources */,
 				0481A18D1D01D3CD002D0738 /* page3.jpg in Resources */,
+				04A3448E1D0511120084A26E /* login_message.png in Resources */,
 				0490C6831CFFE78300EEEEE7 /* LaunchScreen.storyboard in Resources */,
 				0481A1631D01D3CD002D0738 /* 1.png in Resources */,
 				0481A1861D01D3CD002D0738 /* fanhui.png in Resources */,
@@ -1184,6 +1181,7 @@
 				0481A17D1D01D3CD002D0738 /* 33.png in Resources */,
 				0490C83A1D0162F500EEEEE7 /* MLHelpCenterImages.bundle in Resources */,
 				0481A16F1D01D3CD002D0738 /* 20.png in Resources */,
+				04A3448A1D0510F50084A26E /* register_password.png in Resources */,
 				0481A1F61D01DE1E002D0738 /* grayArrow.png in Resources */,
 				0481A1661D01D3CD002D0738 /* 12.png in Resources */,
 				0481A1A31D01D3CD002D0738 /* register_content.png in Resources */,
@@ -1198,6 +1196,7 @@
 				0481A18E1D01D3CD002D0738 /* page4.jpg in Resources */,
 				0481A1A51D01D3CD002D0738 /* register_welcome.png in Resources */,
 				0481A17F1D01D3CD002D0738 /* 5.png in Resources */,
+				04A3448C1D0510F90084A26E /* register_message.png in Resources */,
 				0481A18F1D01D3CD002D0738 /* page5.jpg in Resources */,
 				0481A18C1D01D3CD002D0738 /* page2.jpg in Resources */,
 				0481A1A01D01D3CD002D0738 /* register_backgroud.png in Resources */,
@@ -1221,6 +1220,7 @@
 			files = (
 				0481A1C11D01D49B002D0738 /* LoginViewController.m in Sources */,
 				718743711D000E230013B01D /* MMDrawerVisualState.m in Sources */,
+				04A344881D050E480084A26E /* AFNCore.m in Sources */,
 				0481A1C51D01D4B3002D0738 /* UpdataViewController.m in Sources */,
 				0490C7461CFFEF6400EEEEE7 /* BaseModel.m in Sources */,
 				0490C67B1CFFE78300EEEEE7 /* ViewController.m in Sources */,
@@ -1276,6 +1276,7 @@
 				0481A1DF1D01D95C002D0738 /* MyViewController.m in Sources */,
 				0490C6F81CFFEF1200EEEEE7 /* AFURLRequestSerialization.m in Sources */,
 				0490C7021CFFEF1200EEEEE7 /* UIRefreshControl+AFNetworking.m in Sources */,
+				7118FDC11D02B69E0059DDD2 /* DetalViewController.m in Sources */,
 				0490C6C81CFFEF0700EEEEE7 /* SDWebImageDownloaderOperation.m in Sources */,
 				0490C6CC1CFFEF0700EEEEE7 /* UIImage+GIF.m in Sources */,
 				0490C6C51CFFEF0700EEEEE7 /* SDWebImageCompat.m in Sources */,
@@ -1292,6 +1293,7 @@
 				0490C6FB1CFFEF1200EEEEE7 /* AFAutoPurgingImageCache.m in Sources */,
 				0481A1D01D01D55D002D0738 /* OurViewController.m in Sources */,
 				0481A1E51D01DACE002D0738 /* CollectViewController.m in Sources */,
+				71B4831D1D0265F900413A33 /* HotModel.m in Sources */,
 				0490C6F61CFFEF1200EEEEE7 /* AFNetworkReachabilityManager.m in Sources */,
 				0490C7311CFFEF4500EEEEE7 /* MJRefreshAutoFooter.m in Sources */,
 				0490C7381CFFEF4500EEEEE7 /* MJRefreshAutoStateFooter.m in Sources */,

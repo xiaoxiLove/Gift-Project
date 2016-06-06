@@ -8,9 +8,17 @@
 
 #import "LoginViewController.h"
 #import <MaxLeap/MaxLeap.h>
+#import "AFNCore.h"
+#import "MyViewController.h"
+#import "RegisterViewController.h"
 
 
 @interface LoginViewController ()
+{
+    UITextField *emailField;
+    
+    UITextField *passField;
+}
 
 @end
 
@@ -18,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     //设置登录界面背景图片
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"login_backgroud"]];
@@ -31,25 +40,25 @@
     
     [self.view addSubview:ivLogo];
     
-    //设置登录界面输入手机框的图片
-    UIImageView *ivTel = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 272, 50)];
+    //设置登录界面输入邮箱框的图片
+    UIImageView *ivEmail = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 272, 50)];
     
-    ivTel.center = CGPointMake(kScreenW/2, kScreenH/3);
+    ivEmail.center = CGPointMake(kScreenW/2, kScreenH/3);
     
-    ivTel.image = [UIImage imageNamed:@"login_tel"];
+    ivEmail.image = [UIImage imageNamed:@"login_message"];
     
-    [self.view addSubview:ivTel];
+    [self.view addSubview:ivEmail];
     
     //设置登录界面输入的手机框
-    UITextField *telField = [[UITextField alloc]initWithFrame:CGRectMake(40, 0, 200, 50)];
+    emailField = [[UITextField alloc]initWithFrame:CGRectMake(40, 0, 200, 50)];
     
-    telField.center = CGPointMake(kScreenW/1.9, kScreenH/3);
+    emailField.center = CGPointMake(kScreenW/1.9, kScreenH/3);
     
-    telField.placeholder = @"请输入手机号";
+    emailField.placeholder = @"请输入邮箱";
     
-    telField.keyboardType = UIKeyboardTypePhonePad;
+    emailField.keyboardType = UIKeyboardTypeEmailAddress;
     
-    [self.view addSubview:telField];
+    [self.view addSubview:emailField];
     
     //设置登录界面输入密码的图片
     UIImageView *ivPass = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 272, 50)];
@@ -61,11 +70,13 @@
     [self.view addSubview:ivPass];
     
     //设置登录界面输入的密码框
-    UITextField *passField = [[UITextField alloc]initWithFrame:CGRectMake(40, 0, 200, 50)];
+    passField = [[UITextField alloc]initWithFrame:CGRectMake(40, 0, 200, 50)];
     
     passField.center = CGPointMake(kScreenW/1.9, kScreenH/2.3);
     
     passField.placeholder = @"请输入密码";
+    
+    passField.secureTextEntry = YES;
     
     passField.keyboardType = UIKeyboardTypeDefault;
     
@@ -78,9 +89,9 @@
     
     [loginBtn setImage:[UIImage imageNamed:@"login_button"] forState:UIControlStateNormal];
     
-    loginBtn.center = CGPointMake(kScreenW/3.2, kScreenH/1.8);
-    
     [loginBtn addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    loginBtn.center = CGPointMake(kScreenW/3.2, kScreenH/1.8);
     
     [self.view addSubview:loginBtn];
     
@@ -90,6 +101,8 @@
     [registerBtn setTitle:@"" forState:UIControlStateNormal];
     
     [registerBtn setImage:[UIImage imageNamed:@"register_button"] forState:UIControlStateNormal];
+    
+    [registerBtn addTarget:self action:@selector(registerAction) forControlEvents:UIControlEventTouchUpInside];
     
     registerBtn.center = CGPointMake(kScreenW/1.5, kScreenH/1.8);
     
@@ -125,24 +138,81 @@
     
 }
 
+//利用正则表达式验证
+- (BOOL)isValidateEmail:(NSString *)email {
+    
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    
+    return [emailTest evaluateWithObject:email];
+    
+}
+
+- (void)alertWithTitle:(NSString *)title withMessage:(NSString *)message{
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    
+    [alert addAction:action];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+//登录按钮实现
 - (void)loginAction{
     
+    if (emailField.text.length == 0) {
+        
+        [self alertWithTitle:@"登录失败" withMessage:@"邮箱不能为空"];
+        
+    }else if (passField.text.length<6 || passField.text.length>12 ){
+        
+        [self alertWithTitle:@"登录失败" withMessage:@"密码长度必须为6-12位"];
+        
+    }else if (![self isValidateEmail:emailField.text]) {
+        
+        [self alertWithTitle:@"登录失败" withMessage:@"邮箱不正确"];
+        
+    }else{
+        
+        [AFNCore loginByEmail:emailField.text byPassword:passField.text byMyBlock:^(id result) {
+            
+            if ([(NSString *)result isEqualToString:@"登录成功"]){
+                
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"登录成功" message:@"登录成功" preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                    
+                    MyViewController *myVC = [[MyViewController alloc]init];
+                    
+                    [self presentViewController:myVC animated:YES completion:nil];
+                    
+                }];
+                
+                [alert addAction:action];
+                
+                [self presentViewController:alert animated:YES completion:nil];
+                
+            }else{
+                
+                [self alertWithTitle:@"登录失败" withMessage:result];
+                
+            }
+        }];
+    }
+}
+
+- (void)registerAction{
+    
+    RegisterViewController *registerVC = [[RegisterViewController alloc]init];
+    
+    [self presentViewController:registerVC animated:YES completion:nil];
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
