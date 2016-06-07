@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailModel.h"
 
 @interface DetailViewController : UIViewController
+
+
+@property(nonatomic,retain)DetailModel *model;
+
 
 @end

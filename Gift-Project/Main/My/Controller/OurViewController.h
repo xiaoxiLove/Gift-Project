@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailModel.h"
 
 @interface OurViewController : UIViewController
 

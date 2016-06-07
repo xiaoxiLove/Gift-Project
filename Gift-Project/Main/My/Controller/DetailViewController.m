@@ -35,7 +35,7 @@
     
     [self.view addSubview:btn];
     
-    btn.backgroundColor = [UIColor cyanColor];
+    [btn setImage:[UIImage imageNamed:@"back.png"] forState:UIControlStateNormal];
     
     btn.titleLabel.text = @"退出";
     
@@ -43,6 +43,11 @@
 
     
     
+}
+
+-(void)setModel:(DetailModel *)model{
+    
+    model = _model;
 }
 
 
@@ -73,10 +78,9 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identy];
         
         
-        
-        
-        
     }
+    
+    cell.textLabel.text = _model.username;
     
     return cell;
     
@@ -84,11 +88,14 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    return (kScreenH - 100)/5;
+    
+}
 /*
 #pragma mark - Navigation
 

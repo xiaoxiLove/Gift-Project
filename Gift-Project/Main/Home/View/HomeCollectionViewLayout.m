@@ -97,7 +97,7 @@ static const UIEdgeInsets kDefaultInsets = {10,10,10,10};
     CGFloat  cellWith = (self.collectionView.frame.size.width - kDefaultInsets.left - kDefaultInsets.right - (kColumns-1)*kSpace)/kColumns;
     
     //2.设置单元格高度 高度为不定值 随机获取
-    CGFloat cellHeight = 100 + arc4random_uniform(150);
+    CGFloat cellHeight = 150 + arc4random_uniform(150);
     
     //3.设置x轴
     //记录高度最小列的下标

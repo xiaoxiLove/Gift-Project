@@ -15,6 +15,9 @@
 #import "UpdataViewController.h"
 #import "QuitViewController.h"
 #import "LoginViewController.h"
+#import "DetailModel.h"
+#import <Maxleap/MaxLeap.h>
+#import "AFNCore.h"
 
 @interface MyViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -37,7 +40,17 @@
     _tableView.dataSource = self;
     
     [self.view addSubview:_tableView];
+    
+    [self loadData];
 }
+
+-(void)loadData{
+    
+    
+    
+    
+}
+
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
@@ -92,6 +105,12 @@
         
         imageView1.image = [UIImage imageNamed:@"456.jpg"];
         
+        cell.backgroundColor = [UIColor greenColor];
+        
+        cell.layer.cornerRadius = 20;
+        
+        cell.layer.masksToBounds = YES;
+        
         [cell addSubview:imageView1];
         
         
@@ -106,7 +125,9 @@
         
         cell.backgroundColor = [UIColor cyanColor];
         
+        cell.layer.cornerRadius = 20;
         
+        cell.layer.masksToBounds = YES;
         
     }
     
@@ -165,9 +186,39 @@
 //    }];
     
     
-    LoginViewController *loginVC = [[LoginViewController alloc]init];
+    MLUser *user =  (MLUser *)[MLUser currentUser];
     
-    [self presentViewController:loginVC animated:YES completion:nil];
+    
+    
+    
+    
+    
+    DetailModel *model = [[DetailModel alloc]init];
+    
+    model.username = user[@"username"];
+    
+    model.date = user[@"lastLoginTime"];
+    
+    
+    
+    
+    
+    
+    if (!user) {
+        LoginViewController *loginVC = [[LoginViewController alloc]init];
+        
+        [self presentViewController:loginVC animated:YES completion:nil];
+    }else{
+        
+        
+        DetailViewController *detail = [[DetailViewController alloc]init];
+        
+        [self presentViewController:detail animated:YES completion:^{
+            
+            NSLog(@"弹出");
+        }];
+    }
+
     
     
     

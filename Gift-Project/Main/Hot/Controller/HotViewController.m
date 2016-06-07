@@ -123,7 +123,7 @@ static NSString *cell_identy = @"cell";
             
             model.giftPrice=myObject[@"Price"];
             
-//          model.giftDetail=myObject[@"giftDetail"];
+            model.giftDetail=myObject[@"giftDetail"];
             
             model.imageurl=myObject[@"ImageUrl"];
             
@@ -152,7 +152,7 @@ static NSString *cell_identy = @"cell";
             
             modelFemale.giftPrice=myObject[@"Price"];
             
-           //model.giftDetail=myObject[@"giftDetail"];
+            model.giftDetail=myObject[@"giftDetail"];
             
             modelFemale.imageurl=myObject[@"ImageUrl"];
             
@@ -269,7 +269,7 @@ static NSString *cell_identy = @"cell";
 //边缘大小
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     
-    return UIEdgeInsetsMake(10, 10, 10, 10);
+    return UIEdgeInsetsMake(10, 10, 13, 10);
     
 }
 
